@@ -13,10 +13,10 @@ TRIPO_API_KEY = config.TRIPO_API_KEY
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # 【修正1】関数名を統一しました
-def generate_monster(joy, fun, anger, sadness, fear):
+def generate_monster(joy, calm, anger, sadness, fear):
     # 1. Geminiでプロンプトを生成
     formatted_prompt = prompt.base_prompt.format(
-        joy=joy, fun=fun, anger=anger, sadness=sadness, fear=fear
+        joy=joy, calm=calm, anger=anger, sadness=sadness, fear=fear
     )
     
     print(f"--- Geminiに感情パラメータを送信中... ---")
@@ -71,7 +71,7 @@ def generate_monster(joy, fun, anger, sadness, fear):
                 
                 # 【修正3】存在しない変数 emotion_param を削除し、具体的なパラメータ名に変更
                 # 拡張子も .glb に修正（中身がGLBのため）
-                filename = f"monster_J{joy}_F{fun}_A{anger}_S{sadness}_Fe{fear}.glb"
+                filename = f"monster_J{joy}_C{calm}_A{anger}_S{sadness}_Fe{fear}.glb"
                 
                 print("生成成功！ファイルをダウンロードします...")
                 download_and_save(result_url, filename)
@@ -110,13 +110,13 @@ if __name__ == "__main__":
     
     try:
         j = input("Joy (喜び): ") or "1"
-        f = input("Fun (楽しい): ") or "1"
+        c = input("Calm (穏やか): ") or "1"
         a = input("Anger (怒り): ") or "1"
         s = input("Sadness (悲しみ): ") or "1"
         fe = input("Fear (恐怖): ") or "1"
         
         # 関数呼び出し
-        generate_monster(j, f, a, s, fe)
+        generate_monster(j, c, a, s, fe)
         
     except KeyboardInterrupt:
         print("\n中止しました。")
