@@ -1,4 +1,4 @@
 config.py
 __pycache__/
-exported_models/
+exported_models/*glb
 .DS_Store

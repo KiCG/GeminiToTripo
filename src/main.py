@@ -1,3 +1,9 @@
+import sys
+import os
+
+# 1つ上の階層(ルート)のパスを通す設定
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from google import genai
 import requests
 import time
