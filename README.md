@@ -27,9 +27,12 @@
 ```bash
 git clone [https://github.com/あなたのユーザー名/EmotionalMonsterFab.git](https://github.com/あなたのユーザー名/EmotionalMonsterFab.git)
 cd EmotionalMonsterFab
+```
 
 ### ライブラリのインストール
+```bash
 pip install -r requirements.txt
+```
 
 ### フォルダ構成
 EmotionalMonsterFab/          # プロジェクトのルートディレクトリ
