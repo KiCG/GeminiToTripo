@@ -11,7 +11,7 @@
 ## 🚀 機能
 
 - **感情パラメータ入力**: 5つの感情（Joy, Calm, Anger, Sadness, Fear）を1〜5のスケールで指定可能。
-- **動的プロンプト生成**: Google Gemini 2.0 Flash (または 1.5) を使用し、感情の組み合わせから最適な3D生成用プロンプトを作成。
+- **動的プロンプト生成**: Google Gemini 2.5 Flash を使用し、感情の組み合わせから最適な3D生成用プロンプトを作成。
 - **Text-to-3D 生成**: Tripo API を使用し、プロンプトから高速に3Dモデルを生成。
 - **自動ダウンロード**: 生成されたモデル（.glb形式）を自動でローカルフォルダに保存。
 
@@ -25,8 +25,8 @@
 
 ### 1. リポジトリのクローン
 ```bash
-git clone [https://github.com/KiCG/EmotionalMonsterMaker.git](https://github.com/KiCG/EmotionalMonsterMaker.git)
-cd EmotionalMonsterFab
+git clone https://github.com/KiCG/Emotional-Monster-Maker
+cd Emotional-Monster-Maker
 ```
 
 ### 2. ライブラリのインストール
@@ -49,7 +49,7 @@ python src/main.py
 
 ### フォルダ構成
 ```text
-EmotionalMonsterFab/
+Emotional-Monster-Maker/
 ├── exported_models/      # 生成された3Dモデルの保存先
 ├── src/                  # ソースコード
 │   ├── __init__.py
