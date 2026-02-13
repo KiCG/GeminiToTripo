@@ -1,6 +1,6 @@
-# Emotional Monster Fab
+# Emotional Monster Maker
 
-**Emotional Monster Fab** は、ユーザーが入力した「感情パラメータ」に基づいて、AIがオリジナルの3Dモンスターを自動生成するPythonツールです。
+**Emotional Monster Maker** は、ユーザーが入力した「感情パラメータ」に基づいて、AIがオリジナルの3Dモンスターを自動生成するPythonツールです。
 
 「喜び」「穏やかさ」「怒り」「悲しみ」「恐怖」の5つの感情数値を入力すると、Google Gemini がその感情を視覚的な特徴（形状、色、テクスチャ）に変換し、Tripo AI がそれを3Dモデル（.glb）として具現化します。
 
@@ -25,13 +25,26 @@
 
 ### 1. リポジトリのクローン
 ```bash
-git clone [https://github.com/あなたのユーザー名/EmotionalMonsterFab.git](https://github.com/あなたのユーザー名/EmotionalMonsterFab.git)
+git clone [https://github.com/KiCG/EmotionalMonsterMaker.git](https://github.com/KiCG/EmotionalMonsterMaker.git)
 cd EmotionalMonsterFab
 ```
 
-### ライブラリのインストール
+### 2. ライブラリのインストール
 ```bash
 pip install -r requirements.txt
+```
+
+### 3. APIキーの設定
+```python
+# config.py
+GEMINI_API_KEY = "ここにGeminiのAPIキー"
+TRIPO_API_KEY = "ここにTripoのAPIキー"
+```
+
+### 使い方
+以下のコマンドでプログラムが実行します
+```bash
+python src/main.py
 ```
 
 ### フォルダ構成
@@ -39,6 +52,7 @@ pip install -r requirements.txt
 EmotionalMonsterFab/
 ├── exported_models/      # 生成された3Dモデルの保存先
 ├── src/                  # ソースコード
+│   ├── __init__.py
 │   ├── main.py           # メイン実行ファイル
 │   └── prompt.py         # プロンプト設定
 ├── config.py             # 設定ファイル (Git対象外)
