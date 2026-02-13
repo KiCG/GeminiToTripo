@@ -35,21 +35,13 @@ pip install -r requirements.txt
 ```
 
 ### フォルダ構成
-EmotionalMonsterFab/          # プロジェクトのルートディレクトリ
-│
-├── output/                   # 【新規】生成された3Dモデルの保存先
-│   └── .gitkeep              # 空フォルダをGitに維持するためのファイル
-│
-├── src/                      # 【新規】ソースコードをまとめる場所
-│   ├── __init__.py           # (空でOK) Pythonパッケージとして扱う印
-│   ├── main.py               # メイン実行ファイル
-│   ├── prompt.py             # プロンプト管理
-│   └── utils.py              # (将来用) 便利な関数など
-│
-├── config.py                 # APIキー設定 (Gitには上げない)
-├── config.example.py         # 設定のひな形 (Gitに上げる)
-│
-├── .gitignore                # Git除外設定
-├── .gitattributes            # Git属性設定
-├── requirements.txt          # 【新規】必要なライブラリ一覧
-└── README.md                 # 説明書
+```text
+EmotionalMonsterFab/
+├── exported_models/      # 生成された3Dモデルの保存先
+├── src/                  # ソースコード
+│   ├── main.py           # メイン実行ファイル
+│   └── prompt.py         # プロンプト設定
+├── config.py             # 設定ファイル (Git対象外)
+├── requirements.txt      # 必要なライブラリ一覧
+└── README.md             # 説明書
+```
